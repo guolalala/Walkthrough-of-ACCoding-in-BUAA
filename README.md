@@ -191,7 +191,7 @@ Max(a,b)
 - **1706** 影佑 QQL EdwardZhu
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
-- **1821** yhb aikx qxforever great_designer
+- **1821** yhb aikx Kevin00 qxforever great_designer
 - **1906** Pantw
 - 各位在出题前线brainstorm的助教们
 - 以及其他我见过博客交流过但是忘记了姓名的同学
