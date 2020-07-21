@@ -35,7 +35,7 @@ authored by GoatGirl98
 
 **update0703:添加17/18级航C以及18级程设的习题整理，感谢留下题解的助教组。**
 
-**update0714:为了方便整理,之后上传的题解将全部以md嵌入代码的形式保留，有需要的同学直接阅读文件夹的readme即可。**
+**update0714:为了方便整理,之后上传的题解部分可能以md嵌入代码的形式保留，有需要的同学直接阅读文件夹的readme即可。**
 
 **P.S.题库地址为[accoding.cn](accoding.cn),本OJ为北航软件学院的第4代OJ，别称为“AC编程”或者“爱编程”（其前身第3代为acm.buaa.edu.cn）。当前OJ环境较为成熟稳定，面向全校授课。不过以防万一，还是需要声明，本题解项目在北航OJ更新至第5代之前将一直有效。**
 
@@ -200,7 +200,7 @@ Max(a,b)
 - **1421** shiyi
 - **1521** dama modricWang mdd gzh DH AlvinZH Magry 王木木 redundant bamboo
 - **1606** wjj
-- **1621** TQ Ghoste 1551 yhy
+- **1621** TQ Ghoste QZZ yhy
 - **1706** 影佑 QQL EdwardZhu
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
