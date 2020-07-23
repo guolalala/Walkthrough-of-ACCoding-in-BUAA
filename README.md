@@ -10,6 +10,10 @@ authored by GoatGirl98
 
 拜托各位了，这会给我考研面试以及后续的工作生活带来比较大的帮助！在此先谢过各位同学了！！！QAQ
 
+友情链接:https://github.com/Great-designer/BUAA-OJ-Project
+
+上面是当前总过题榜三的学弟great_designer的北航OJ标程备份库。（本人是总过题榜二，嘿嘿_(:з」∠)_ ）
+
 # 当前施工进度
 
 | 序号 | 课程名称                         | 开放状态 | 更新进度                                       |
