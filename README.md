@@ -12,7 +12,7 @@ authored by GoatGirl98
 
 友情链接:https://github.com/Great-designer/BUAA-OJ-Project
 
-上面是当前总过题榜三的学弟great_designer的北航OJ标程备份库。（本人是总过题榜二，嘿嘿_(:з」∠)_ ）
+上面是当前总过题榜三，1821的great_designer佬的北航OJ标程备份库。（本人是总过题榜二，嘿嘿_(:з」∠)_ ）
 
 # 当前施工进度
 
