@@ -1,6 +1,6 @@
 # Final-The Last Battle!! 2014级算法期末上机
 
-# `A `简单题——I wanna be the 升级者Ⅰ
+# `A` 简单题——I wanna be the 升级者Ⅰ
 
 时间限制: 500 ms 内存限制: 65536 kb
 
