@@ -1,187 +1,79 @@
+#include<cctype>
 #include<iostream>
+#include<cstring>
 #include<string>
-
+#include<vector>
+#include<algorithm>
 using namespace std;
-
-int hexTransfer(char a) {
-    if (a >= '0' && a <= '9') {
-        return a - '0';
+const string jhljx = "jhljx", xihang = "xihang";
+const string jhljxihang = "jhljxihang", head = "0x";
+int indexJ,indexX;
+bool isHex(char a) {
+    return isdigit(a) || (a >= 'a' && a <= 'f') || (a >= 'A' && a <= 'F');
+}
+int hexForm(char a) {
+    if(isdigit(a)) return a - '0';
+    else if (isupper(a)) return a - 'A' + 10;
+    else return a - 'a' + 10;
+}
+string type, input;
+inline int binNum(const string& a) {
+    int ret = 0;
+    for(int i = 0; i < a.size(); ++i)
+        ret = (ret << 1) + a[i] - 48;
+    return ret;
+}
+inline void handleA(const string& a) {
+    for(int i = 0; i < a.size(); i += 8)
+        putchar(binNum(a.substr(i, 8)));
+    putchar('\n');
+}
+inline bool parseNum(const string& a) {
+    return isHex(a[2]) && isHex(a[3]) && (a[4] == '#');
+}
+struct num {
+    int index;
+    int value;
+    num(int Index = 0, int Value = 0) { index = index, value = Value; }
+};
+vector<num> pack;
+inline void handleB(const string& a) {
+    indexJ = indexX = -1;
+    pack.clear();
+    int start = 0, pos = -1;
+    while((pos = a.find(jhljx, start)) != a.npos) {
+        if(pos > a.size() - 10 || a.substr(pos, 10) != jhljxihang)
+            indexJ = pos;
+        start = pos + 1;
     }
-    else if (a >= 'a' && a <= 'f') {
-        return a - 87;
+    start = 0, pos = -1;
+    if ((pos = a.find(xihang, start)) != a.npos)
+        indexX = pos;
+    start = 0, pos = -1;
+    while((pos = a.find(head, start)) != a.npos) {
+        if(parseNum(a.substr(pos, 5)))
+            pack.push_back(num(pos, (hexForm(a[pos + 2]) << 4) + hexForm(a[pos + 3])));
+        start = pos + 1;
+    }
+    int namecnt = (indexJ >= 0) + (indexX >= 0);
+    int numcnt = pack.size() >> 1;
+    int realcnt = min(namecnt, numcnt);
+    if(realcnt == 0)
+        puts("nothing found!");
+    else if (realcnt == 1) {
+        printf("%s", indexX >= 0 ? xihang.c_str() : jhljx.c_str());
+        printf("(%d,%d)\n",pack[0].value,pack[1].value);
     }
     else {
-        return a - 65;
+        printf("%s", indexX < indexJ ? xihang.c_str() : jhljx.c_str());
+        printf("(%d,%d) ",pack[0].value,pack[1].value);
+        printf("%s", indexX > indexJ ? xihang.c_str() : jhljx.c_str());
+        printf("(%d,%d)\n",pack[2].value,pack[3].value);
     }
 }
-
-int transHexFormaet(string a) {
-    int ans = 0;
-    int size = a.length() - 1;
-    for (int i = 2; i < size; i++) {
-        ans = ans * 16 + hexTransfer(a[i]);
-    }
-    return ans;
-}
-
-
 int main() {
-
     ios::sync_with_stdio(false);
-
-    char signal;
-    string target;
-    char jhljx[] = "jhljx";
-    char xihang[] = "xihang";
-
-    while (cin >> signal) {
-        cin >> target;
-
-        if (signal == 'A') {
-            int size = target.length();
-            for (int i = 0; i < size; i += 8) {
-                char a = (char)(hexTransfer(target[i]) * 128 +
-                    hexTransfer(target[i + 1]) * 64 +
-                    hexTransfer(target[i + 2]) * 32 +
-                    hexTransfer(target[i + 3]) * 16 +
-                    hexTransfer(target[i + 4]) * 8 +
-                    hexTransfer(target[i + 5]) * 4 +
-                    hexTransfer(target[i + 6]) * 2 +
-                    hexTransfer(target[i + 7]) * 1);
-                cout << a;
-            }
-            cout << endl;
-        }
-        else {
-            bool found = false;//found XY
-
-            for (int i = 0; i < target.length(); ++i) {
-
-                int state = 0;//状态自动机
-
-                if (target[i] != 'j' && target[i] != 'x') {
-                    continue;
-                }
-
-                int j = 0;
-                int x = i;//记录当前下标
-                int temp;
-
-                if (target[i] == 'j') {
-
-                    while (target[x++] == jhljx[j++] && jhljx[j] != '\0' && x < target.length());
-                    //读取到最后成功，或者原数组长度不够，或者不等的失败，都会终止识别
-
-                    if (jhljx[j] == '\0') {
-                        //成功得读到了最后
-
-                        state = 1;//状态变为jhljx
-                        temp = x;
-
-                    }
-                    j = 0;
-                    x--;
-                    //回撤一个单位，开始处理jhljxihang的问题
-                    //cout << "now x is " << x << endl;
-                    while (target[x++] == xihang[j++] && xihang[j] != '\0' && x < target.length());
-
-                    if (xihang[j] == '\0') {
-                        state = 2;//此时的状态应该变成xihang了
-                        temp = x;
-                    }
-
-                }
-                else {
-                    while (target[x++] == xihang[j++] && xihang[j] != '\0' && x < target.length());
-
-                    if (xihang[j] == '\0') {
-                        state = 2;
-                        temp = x;
-                    }
-                }
-
-                if (state) {
-
-                    i = temp;//跳过所有名字相关的字符
-
-                    while (i < target.length() && !(target[i] == 'x' && target[i - 1] == '0')) {
-                        i++;
-                    }
-                    //找0x，无论成功还是越界失败都会停止
-                    int result = 0;
-                    int resultx, resulty;
-
-                    for (i++; i < target.length() && target[i] != '#'; ++i) {
-
-                        if ((target[i] >= '0' && target[i] <= '9') ||
-                            (target[i] >= 'a' && target[i] <= 'f' ||
-                            (target[i] >= 'A' && target[i] <= 'F')))
-                        {
-                            result = result * 16 + hexTransfer(target[i]);
-                        }
-                        else {
-                            break;
-                        }
-
-                    }
-                    //cout << "i is :" << i << " length : " << target.length() << endl;
-                    if (i >= target.length())
-                    {
-                        break;
-                    }
-
-                    else
-                    {
-                        resultx = result;
-                        while (i < target.length() && !(target[i] == 'x' && target[i - 1] == '0')) {
-                            i++;
-                        }
-                        result = 0;
-
-                        for (i++; i < target.length() && target[i] != '#'; ++i) {
-
-                            if ((target[i] >= '0' && target[i] <= '9') ||
-                                (target[i] >= 'a' && target[i] <= 'f' ||
-                                (target[i] >= 'A' && target[i] <= 'F')))
-                            {
-                                result = result * 16 + hexTransfer(target[i]);
-                            }
-                            else {
-                                break;
-                            }
-
-                        }
-                        //cout << "i is :" << i << " length : " << target.length() << endl;
-                        if (i >= target.length())
-                        {
-                            break;
-                        }
-
-                        
-                        resulty = result;
-                        if (state == 1) {
-                            cout << "jhljx(" << resultx << "," << resulty << ")" << " ";
-                        }
-                        else {
-                            cout << "xihang(" << resultx << "," << resulty << ")" << " ";
-                        }
-                        state = 0;
-                        found = true;
-                    }
-
-                }
-
-            }
-            if (!found) {
-                cout << "nothing found!" << endl;
-            }
-            else {
-                cout << endl;
-            }
-
-        }
-
-    }
-    return 0;
-
+    cin.tie(0), cout.tie(0);
+    while(cin >> type >> input)
+        type[0] == 'A' ? handleA(input) : handleB(input);
 }
