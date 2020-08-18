@@ -221,7 +221,7 @@ Max(a,b)
 - **1521** dama modricWang mdd gzh DH AlvinZH redundant bamboo
 - **1606** wjj
 - **1621** TQ Ghoste QZZ yhy
-- **1706** 影佑 QQL EdwardZhu
+- **1706** 影佑 QQL zhuziyu-edward
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
 - **1821** wy yhb aikx Kevin00 qxforever great_designer
