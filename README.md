@@ -10,9 +10,13 @@ authored by GoatGirl98
 
 拜托各位了，这会给我考研面试以及后续的工作生活带来比较大的帮助！在此先谢过各位同学了！！！QAQ
 
-友情链接:https://github.com/Great-designer/BUAA-OJ-Project
+友情链接1:https://github.com/Great-designer/BUAA-OJ-Project
 
 上面是当前总过题榜三，1821的great_designer佬的北航OJ标程备份库。（本人是总过题榜二，嘿嘿_(:з」∠)_ ）
+
+友情链接2:https://github.com/DanielW10001/advised_untold_techniques_for_cser
+
+北航6系的同学看过来呀~初入CS坑必备的经验都是不可少滴，希望这个项目能够帮到你哦，嘿嘿_(:з」∠)_
 
 **P.S.非常欢迎各位助教或者同学上传不完全开放的课程题解。根据观察，有一定数量的同学会在刷题的时候优先从自己上的私有课程开始刷起（至少目前18级航C的题解派上了用场）。如有意愿，可通过上述方式私信笔者，这将会对这部分同学提供非常大的帮助！**
 
