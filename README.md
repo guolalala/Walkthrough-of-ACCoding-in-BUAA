@@ -12,7 +12,9 @@ authored by GoatGirl98
 
 友情链接1:https://github.com/Great-designer/BUAA-OJ-Project
 
-上面是当前总过题榜三，1821的great_designer佬的北航OJ标程备份库。（本人是总过题榜二，现在也有参与到项目的补完中哦，嘿嘿_(:з」∠)_ ）
+上面是当前总过题榜三，1821的great_designer佬的北航OJ标程备份库。
+
+（本人是总过题榜二，现在也有参与到项目的补完中哦，嘿嘿_(:з」∠)_ ）
 
 友情链接2:https://github.com/DanielW10001/advised_untold_techniques_for_cser
 
