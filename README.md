@@ -233,8 +233,8 @@ Max(a,b)
 - **1706** 影佑 QQL zhuziyu-edward
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
-- **1821** wy yhb aikx Kevin00 qxforever great_designer
-- **1906** Pantw
+- **1821** wy qrn yhb aikx Kevin00 qxforever Great-designer
+- **1906** Pantw dhy
 - 各位在出题前线brainstorm以及留下题解的助教们
 - 以及其他我见过博客交流过但是忘记了姓名的同学
 
