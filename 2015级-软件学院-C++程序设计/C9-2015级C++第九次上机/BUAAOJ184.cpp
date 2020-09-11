@@ -36,12 +36,12 @@ int main() {
         if(op=="SHELVE") {
             for(auto x:desk) {
                 auto p = shelve.find(x);
-                cout << "Put " << books[x].title;
-                if(p == shelve.begin()) cout << " first" << endl;
-                else cout << " after " << books[*(--p)].title << endl;
+                printf("Put %s", books[x].title.c_str());
+                if(p == shelve.begin()) puts(" first");
+                else printf(" after "), puts(books[*(--p)].title.c_str());
             }
             desk.clear();
-            cout << "END\n";
+            puts("END");
             continue;
         } else {
             getline(cin, title);
@@ -50,5 +50,4 @@ int main() {
             else if(op == "BORROW") shelve.erase(ID[title]);
         }
     }
-    return 0;
 }
