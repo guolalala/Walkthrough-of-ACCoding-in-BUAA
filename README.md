@@ -233,8 +233,8 @@ Max(a,b)
 
 - **1421** shiyi Magry 王木木
 - **1521** dama modricWang mdd gzh DH AlvinZH redundant bamboo
-- **1606** wjj
-- **1621** TQ Ghoste QZZ yhy
+- **1606** wjj gst
+- **1621** TQ QZZ yhy
 - **1706** 影佑 QQL zhuziyu-edward
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
