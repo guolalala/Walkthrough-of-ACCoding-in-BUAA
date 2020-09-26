@@ -35,7 +35,7 @@ int main() {
     while (scanf("%d%d%d", &a, &b, &k) != EOF) {
         //卡特兰数变种,ans = C_{k-1}^{(k-b)/2}-C_{k-1}^{(k-b)/2-1}=\frac{2b}{k+b}C_{k-1}^{(k-b)/2}
         if (k < b) puts("0");
-        //else if (k == b) puts("1");
+        //else if (k == b) puts("1"); 加上这句话只有0.5,然而这很显然是正确的
         else if ((k - b) & 1) puts("0");
         else {
             ans = (((((((2ll * b) % MOD) * fac[k + b - 1]) % MOD) * ifac[k + b]) % MOD) * C(k - 1, (k - b) >> 1)) % MOD;
