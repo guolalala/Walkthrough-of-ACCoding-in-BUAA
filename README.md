@@ -235,7 +235,7 @@ Max(a,b)
 
 （下列名单的4位代码为入学年份+系号 名字均由网名或者名称缩写代替 排名不分先后）
 
-- **1421** shiyi Magry 王木木
+- **1421** shiyi microhhh Magry 王木木
 - **1521** dama modricWang mdd gzh DH AlvinZH redundant bamboo
 - **1606** wjj gst
 - **1621** TQ QZZ yhy
