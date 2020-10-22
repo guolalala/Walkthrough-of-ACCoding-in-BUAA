@@ -31,7 +31,7 @@ inline void write(ll x) {
 struct MCMF_SPFA {
     static const ll INF = 1145141919810LL;
     static const int maxn = 100010;
-    static const int maxm = 4000010;
+    static const int maxm = 1000010;
 
     struct Edge {
         int next, to;
@@ -125,7 +125,7 @@ int K;
 int u, v, flow, cost;
 int x;
 inline int id(int i, int j, int flag) {
-    return flag * n * m + n * (i - 1) + j;
+    return flag * n * m + m * (i - 1) + j;
 }
 inline bool isLegal(int i, int j) {
     return i >= 1 && i <= n && j >= 1 && j <= m;
