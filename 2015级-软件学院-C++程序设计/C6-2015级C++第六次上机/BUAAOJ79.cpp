@@ -34,7 +34,7 @@ inline bool parseNum(const string& a) {
 struct num {
     int index;
     int value;
-    num(int Index = 0, int Value = 0) { index = index, value = Value; }
+    num(int Index = 0, int Value = 0) { index = Index, value = Value; }
 };
 vector<num> pack;
 inline void handleB(const string& a) {
