@@ -272,7 +272,7 @@ UC Berkeley的教授Brian Harvey在课堂上向他的学生解释为什么不要
 - **1521** dama modricWang mdd gzh DH AlvinZH redundant bamboo
 - **1606** wjj gst
 - **1621** TQ QZZ yhy
-- **1706** 影佑 QQL zhuziyu-edward
+- **1706** 影佑 QQL zhuziyu-edward MountVoom 
 - **1721** mogg 宿命的轮回者
 - **1806** dragonLee potassium
 - **1818** myx
