@@ -64,7 +64,7 @@ struct MCMF_SPFA {
         cnt = 0;
         memset(vis,0,sizeof(vis));
         memset(head, 0xff, sizeof(head));
-        memset(edges, 0, sizeof(edges));
+        //memset(edges, 0, sizeof(edges));
         memset(dis, 0, sizeof(dis));
         memset(pre, 0, sizeof(pre));
         memset(last, 0, sizeof(last));
@@ -148,7 +148,7 @@ int main() {
                     solver.addedge(id(i,j,RIGHT), id(i,j+1,LEFT), solver.INF, 0);
             }
         }
-        write(-solver.MCMF(s, t).second), putchar('\n');
+        write(-solver.MCMF(s, t).second), putchar_unlocked('\n');
     }
     
 }
