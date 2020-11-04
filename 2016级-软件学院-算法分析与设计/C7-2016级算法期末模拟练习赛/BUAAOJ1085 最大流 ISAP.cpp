@@ -7,8 +7,8 @@
 using namespace std;
 struct Maxflow_ISAP{
     static const int INF = 0x3f3f3f3f;
-    static const int maxn = 3000;//点的大小
-    static const int maxm = 1500000;//边
+    static const int maxn = 2500;//点的大小
+    static const int maxm = 1010000;//边
     struct edge {
         int next, to, w;
     }edges[maxm << 1];//双向边
@@ -33,7 +33,7 @@ struct Maxflow_ISAP{
         memset(head, -1, sizeof(head));
         while(q.size())q.pop();
         cnt = 0;
-        memset(edges, 0, sizeof(edges));
+        //memset(edges, 0, sizeof(edges));
         memset(dep, 0, sizeof(dep));
         memset(gap, 0, sizeof(gap));
         memset(cur, 0, sizeof(cur));
