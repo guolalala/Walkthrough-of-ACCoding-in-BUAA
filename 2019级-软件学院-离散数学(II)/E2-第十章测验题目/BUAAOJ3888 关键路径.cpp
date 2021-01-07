@@ -95,6 +95,7 @@ void bfs_e() {
     }
 }
 void print_route() {
+    sort(ans.begin(), ans.end(), compare);
     putchar('[');
     for(int i = 0; i < ans.size(); ++i) {
         putchar('[');
