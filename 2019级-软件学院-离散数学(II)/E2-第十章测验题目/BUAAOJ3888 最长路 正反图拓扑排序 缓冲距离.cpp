@@ -70,7 +70,7 @@ void dfs(int u, int step) {
     }
 }
 void bfs_g() {
-    gq.push(s);
+    for(int i = 1; i <= n; ++i) if(in[i] == 0) gq.push(i);
     while(!gq.empty()) {
         int u = gq.front(); gq.pop();
         for(int i = 0; i < g[u].size(); ++i) {
@@ -82,6 +82,7 @@ void bfs_g() {
     }
 }
 void bfs_e() {
+    for(int i = 1; i <= n; ++i) if(out[i] == 0) gq.push(i);
     eq.push(t);
     TL[t] = TE[t];
     while(!eq.empty()) {
