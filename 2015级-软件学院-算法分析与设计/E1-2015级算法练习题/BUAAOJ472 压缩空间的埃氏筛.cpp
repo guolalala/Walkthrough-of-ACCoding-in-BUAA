@@ -1,11 +1,11 @@
 #include<cstdio>
 #include<cstring>
 #define maxn 25000010
-//100wµÄÊý¾ÝÖÐ£¬Å¼Êý¿ÉÒÔÈ«²¿²»¿¼ÂÇ£¬Èç¹ûÊÇ2µÄ»°£¬Ö±½ÓÊä³öyes
-//ÓÚÊÇºõa[i]±íÊ¾µÄÊÇ2*i+1µÄÊýÊÇ·ñÊÇÖÊÊý
+//100wçš„æ•°æ®ä¸­ï¼Œå¶æ•°å¯ä»¥å…¨éƒ¨ä¸è€ƒè™‘ï¼Œå¦‚æžœæ˜¯2çš„è¯ï¼Œç›´æŽ¥è¾“å‡ºyes
+//äºŽæ˜¯ä¹Ža[i]è¡¨ç¤ºçš„æ˜¯2*i+1çš„æ•°æ˜¯å¦æ˜¯è´¨æ•°
 /*
-1²»ÊÇÖÊÊý£¬ËùÒÔÖ±½Ó¸³Öµfalse
-3ÊÇ£¬ÄÇÃ´9£¬15µÈÒ»¶¨²»ÊÇ 1 4 7 10µÈ¶¼¿ÉÒÔ±»È¥µôÁË£¬¼´Ö±½Ó¼Ók¶¼Éè³Éfalse¼´¿É
+1ä¸æ˜¯è´¨æ•°ï¼Œæ‰€ä»¥ç›´æŽ¥èµ‹å€¼false
+3æ˜¯ï¼Œé‚£ä¹ˆ9ï¼Œ15ç­‰ä¸€å®šä¸æ˜¯ 1 4 7 10ç­‰éƒ½å¯ä»¥è¢«åŽ»æŽ‰äº†ï¼Œå³ç›´æŽ¥åŠ kéƒ½è®¾æˆfalseå³å¯
 
 */
 
@@ -25,7 +25,7 @@ inline void initial() {
 
 	countPrime[1] = 2;
 	for (int i = 2; i < maxn; ++i)countPrime[i] = countPrime[i - 1] + isPrime[i];
-	//4ºÍ3µÄÖÊÊý¸öÊýÒ»Ñù£¬ËùÒÔÖ±½ÓÎÞÄÔÕÒn/2-1¼´¿É
+	//4å’Œ3çš„è´¨æ•°ä¸ªæ•°ä¸€æ ·ï¼Œæ‰€ä»¥ç›´æŽ¥æ— è„‘æ‰¾n/2-1å³å¯
 }
 
 int main() {
