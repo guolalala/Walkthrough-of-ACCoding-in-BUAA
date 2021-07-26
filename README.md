@@ -315,7 +315,7 @@ UC Berkeley的教授Brian Harvey在课堂上向他的学生解释为什么不要
 - **1821** wy qrn yhb aikx Kevin00 qxforever Great-designer
 - **1906** Pantw dhy
 - **1917** 凉宫秋月
-- **1921** wzb hzy
+- **1921** 我要回幼儿园当学霸 小迷弟
 - **1942** 流转起舞
 - 各位在出题前线brainstorm以及留下题解的助教们
 - 以及其他我见过博客交流过但是忘记了姓名的同学
